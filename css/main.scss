@@ -1,0 +1,14 @@
+// hepers
+@import './sass/helpers/variabels';
+@import './sass/helpers/mixin';
+@import './sass/helpers/function';
+// layout
+@import './sass/layout/container';
+@import './sass/layout/header';
+@import './sass/layout/footer';
+// components 
+@import './sass/components/button.scss';
+@import './sass/components/titleSection';
+// pages 
+@import './sass/pages/glopalStyle';
+@import './sass/pages/homePage'

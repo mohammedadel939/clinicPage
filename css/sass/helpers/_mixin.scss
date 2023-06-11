@@ -1,0 +1,31 @@
+@mixin mediaMpile {
+    @media (max-width: 576px) {
+        @content
+    }
+};
+@mixin mediaSmall{
+    @media (min-width: 577px) {
+        @content
+    }
+};
+@mixin mediaNormal {
+    @media (min-width: 768px) {
+        @content
+    }
+};
+@mixin mediaLarg {
+    @media (min-width: 992px) {
+        @content
+    }
+};
+@mixin mediaXlarg {
+    @media (min-width: 1200px) {
+        @content
+    }
+}
+
+
+@mixin prefix($property,$value, $prefix:()) {
+    #{'-' + $property + '-' + $prefix} : $value;
+    #{$property }:$value;
+}

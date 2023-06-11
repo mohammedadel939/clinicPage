@@ -1,0 +1,319 @@
+.landing {
+  height: 80vh;
+  margin: 49px 0 0;
+  @include mediaNormal {
+    margin: 69px 0;
+    height: auto;
+  }
+  @include mediaNormal {
+    height: 600px;
+  }
+  .container {
+    height: 100%;
+    position: relative;
+    .carousel-indicators {
+      align-items: center;
+      button {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    .item {
+      @include mediaNormal {
+        height: 100%;
+      }
+    }
+    .carousel-indicators .active {
+      border: 1px black solid;
+    }
+    .carousel-indicators button {
+      border: 0;
+      @include mediaNormal {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.685);
+      }
+    }
+
+    .heroText {
+      padding: 0 15px;
+      @include mediaNormal {
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        height: 50%;
+        border-radius: 5px;
+        background-color: #eee;
+        padding: 25px 20px;
+      }
+      h1 {
+        font-weight: bold;
+        margin: 20px 0;
+        font-size: 2.5em;
+        div {
+          display: inline-block;
+          span {
+            &.tow {
+              display: none;
+            }
+            &.three {
+              display: none;
+            }
+          }
+        }
+      }
+      p {
+        color: $grayColor;
+        line-height: 1.5;
+        font-size: 1.2em;
+      }
+      .more {
+        margin: 20px 0;
+        @include mediaNormal {
+          display: flex;
+          justify-content: space-around;
+        }
+        .main-button {
+          padding: 5px;
+          border-radius: 0;
+          background-color: white;
+          color: black;
+          &:hover {
+            background-color: $blueColor;
+            color: white;
+          }
+        }
+        .phone {
+          color: $grayColor;
+          font-size: 0.8em;
+          margin-left: 2px;
+          @include mediaNormal {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+// start about me
+.aboutMe {
+  margin: 50px 0;
+  .container {
+    .once {
+      @include mediaNormal {
+        display: flex;
+      }
+    }
+    .text {
+      h1 {
+        padding: 20px 0;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1.1em;
+        color: gray;
+      }
+    }
+    .circle {
+      @include mediaNormal {
+        display: flex;
+        margin-left: 30px;
+      }
+      margin: 30px auto;
+      width: 250px;
+      height: 250px;
+      background-color: #eee;
+      box-shadow: 1px 1px 1px 0 #00000082, -1px -1px 24px 0 #0000003d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 1.3em;
+      text-align: center;
+      padding: 20px;
+      span {
+        font-size: 4.5em;
+        color: $blueColor;
+      }
+    }
+    .images {
+      display: flex;
+      row-gap: 20px;
+      flex-direction: column;
+      @include mediaNormal {
+        flex-direction: row;
+        column-gap: 20px;
+      }
+
+      img {
+        width: 100%;
+        height: 300px;
+        @include mediaNormal {
+          width: 50%;
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+//  Our Timeline
+// varibel
+.OurTimeline {
+  margin: 100px 0;
+  .container {
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      font-weight: bold;
+      margin: 20px 0 50px;
+    }
+    // directions
+    .direction {
+      @include mediaNormal {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .box {
+      @include mediaNormal {
+        display: flex;
+      }
+      border-radius: 5px;
+      margin-bottom: 50px;
+      .theDate {
+        text-align: center;
+        font-size: 1.1em;
+        margin: 20px 0;
+        @include mediaNormal {
+          width: 40%;
+          text-align: end;
+        }
+      }
+      .start {
+        @include mediaNormal {
+          text-align: start;
+        }
+      }
+      .div {
+        display: flex;
+        @include mediaNormal {
+          width: 60%;
+        }
+        .icon {
+          @include mediaNormal {
+            width: 70px;
+            height: 70px;
+            margin-top: -10px;
+            margin-right: 30px;
+            margin-left: 30px;
+          }
+          width: 23%;
+          height: 60px;
+          margin-top: -10px;
+          margin-right: 16px;
+          margin-left: 5px;
+          display: flex;
+          border-radius: 50%;
+          background-color: white;
+          justify-content: center;
+          align-items: center;
+          i {
+            color: $blueColor;
+            font-size: 1.5em;
+            border-radius: 50%;
+          }
+        }
+
+        .text {
+          width: 80%;
+          @include mediaNormal {
+            width: calc(100% - 70px);
+          }
+          h3 {
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 0;
+            position: relative;
+            .one {
+              border: solid transparent 12px;
+              border-left-color: rgb(10, 10, 10);
+              position: absolute;
+              top: 50%;
+              right: 0px;
+              transform: translate(100%, -50%);
+            }
+            .tow {
+              border: solid transparent 12px;
+              border-right-color: rgb(10, 10, 10);
+              position: absolute;
+              top: 50%;
+              left: 0px;
+              transform: translate(-100%, -50%);
+            }
+          }
+
+          p {
+            font-size: 1.3em;
+            padding: 10px 20px;
+            color: $grayColor;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Book-an-appointment {
+  .container {
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 50px 0;
+    }
+    form {
+      input {
+        background-color: #eee;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1em;
+        color: $grayColor;
+        margin-bottom: 10px;
+        border: none;
+        box-shadow: 0px 1px 1px #857e7eab;
+        &:hover,
+        &:focus,
+        :focus-visible {
+          box-shadow: 1px 1px 3px #857e7eab, -1px -1px 3px $blueColor;
+          border: none;
+        }
+        &[type="submit"] {
+          background: $blackColor;
+          width: 150px;
+          color: white;
+          display: block;
+          margin: 30px auto;
+          padding: 10px;
+          border-radius: 0;
+          box-shadow: none;
+          &:hover {
+            background: $blueColor;
+          }
+        }
+      }
+      textarea {
+        width: 100%;
+        background-color: #eee;
+        height: 200px;
+      }
+    }
+  }
+}

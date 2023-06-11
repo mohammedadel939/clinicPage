@@ -1,0 +1,523 @@
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+@media (min-width: 577px) {
+  .container {
+    width: 557px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
+}
+
+.header {
+  background-color: #eee;
+  z-index: 999;
+  box-shadow: 1px 0px 14px #bbb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.header .container .logo {
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .header .container .logo {
+    display: none;
+  }
+}
+.header .container .logo h1 {
+  color: #008eff;
+  font-size: 1.5em;
+}
+.header .container .logo p {
+  color: gray;
+  font-size: 0.8em;
+}
+.header .container .icon {
+  height: 20px;
+}
+@media (min-width: 768px) {
+  .header .container .icon {
+    display: none;
+  }
+}
+.header .container .icon span {
+  transition: 0.7s;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+}
+.header .container .icon span.nativ {
+  margin: 5px 0;
+  background-color: gray;
+}
+.header .container .navbar {
+  padding: 0;
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .header .container .navbar.open {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .header .container .navbar {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .header .container .navbar ul {
+    display: flex;
+    align-items: center;
+  }
+}
+.header .container .navbar ul li a {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  color: gray;
+  font-weight: bold;
+}
+.header .container .navbar ul li a.special {
+  color: black;
+}
+.header .container .navbar ul li a.logo {
+  display: none;
+  cursor: context-menu;
+}
+@media (min-width: 768px) {
+  .header .container .navbar ul li a.logo {
+    display: block;
+    padding: 0;
+    margin: 10px 10px;
+    width: 130px;
+  }
+}
+.header .container .navbar ul li a:hover {
+  background-color: gray;
+  color: white;
+}
+@media (min-width: 768px) {
+  .header .container .navbar ul li a:hover {
+    background-color: #eee;
+    color: black;
+  }
+}
+
+.main-button {
+  background-color: rgba(0, 142, 255, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  min-width: 120px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 1px 1px 1px rgba(24, 23, 23, 0.233);
+}
+.main-button:hover {
+  background-color: #008eff;
+}
+
+.titleSection {
+  text-align: center;
+  margin: 50px 0;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.landing {
+  height: 80vh;
+  margin: 49px 0 0;
+}
+@media (min-width: 768px) {
+  .landing {
+    margin: 69px 0;
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .landing {
+    height: 600px;
+  }
+}
+.landing .container {
+  height: 100%;
+  position: relative;
+}
+.landing .container .carousel-indicators {
+  align-items: center;
+}
+.landing .container .carousel-indicators button {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+@media (min-width: 768px) {
+  .landing .container .item {
+    height: 100%;
+  }
+}
+.landing .container .carousel-indicators .active {
+  border: 1px black solid;
+}
+.landing .container .carousel-indicators button {
+  border: 0;
+}
+@media (min-width: 768px) {
+  .landing .container .carousel-indicators button {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.685);
+  }
+}
+.landing .container .heroText {
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .landing .container .heroText {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 25px 20px;
+  }
+}
+.landing .container .heroText h1 {
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 2.5em;
+}
+.landing .container .heroText h1 div {
+  display: inline-block;
+}
+.landing .container .heroText h1 div span.tow {
+  display: none;
+}
+.landing .container .heroText h1 div span.three {
+  display: none;
+}
+.landing .container .heroText p {
+  color: gray;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+.landing .container .heroText .more {
+  margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .landing .container .heroText .more {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.landing .container .heroText .more .main-button {
+  padding: 5px;
+  border-radius: 0;
+  background-color: white;
+  color: black;
+}
+.landing .container .heroText .more .main-button:hover {
+  background-color: #008eff;
+  color: white;
+}
+.landing .container .heroText .more .phone {
+  color: gray;
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+@media (min-width: 768px) {
+  .landing .container .heroText .more .phone {
+    font-size: 1em;
+  }
+}
+
+.aboutMe {
+  margin: 50px 0;
+}
+@media (min-width: 768px) {
+  .aboutMe .container .once {
+    display: flex;
+  }
+}
+.aboutMe .container .text h1 {
+  padding: 20px 0;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+.aboutMe .container .text p {
+  font-size: 1.1em;
+  color: gray;
+}
+.aboutMe .container .circle {
+  margin: 30px auto;
+  width: 250px;
+  height: 250px;
+  background-color: #eee;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5098039216), -1px -1px 24px 0 rgba(0, 0, 0, 0.2392156863);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .aboutMe .container .circle {
+    display: flex;
+    margin-left: 30px;
+  }
+}
+.aboutMe .container .circle span {
+  font-size: 4.5em;
+  color: #008eff;
+}
+.aboutMe .container .images {
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .aboutMe .container .images {
+    flex-direction: row;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+.aboutMe .container .images img {
+  width: 100%;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .aboutMe .container .images img {
+    width: 50%;
+    height: 400px;
+  }
+}
+
+.OurTimeline {
+  margin: 100px 0;
+}
+.OurTimeline .container h1 {
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0 50px;
+}
+@media (min-width: 768px) {
+  .OurTimeline .container .direction {
+    flex-direction: row-reverse;
+  }
+}
+.OurTimeline .container .box {
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .OurTimeline .container .box {
+    display: flex;
+  }
+}
+.OurTimeline .container .box .theDate {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .OurTimeline .container .box .theDate {
+    width: 40%;
+    text-align: end;
+  }
+}
+@media (min-width: 768px) {
+  .OurTimeline .container .box .start {
+    text-align: start;
+  }
+}
+.OurTimeline .container .box .div {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .OurTimeline .container .box .div {
+    width: 60%;
+  }
+}
+.OurTimeline .container .box .div .icon {
+  width: 23%;
+  height: 60px;
+  margin-top: -10px;
+  margin-right: 16px;
+  margin-left: 5px;
+  display: flex;
+  border-radius: 50%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .OurTimeline .container .box .div .icon {
+    width: 70px;
+    height: 70px;
+    margin-top: -10px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+.OurTimeline .container .box .div .icon i {
+  color: #008eff;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+.OurTimeline .container .box .div .text {
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .OurTimeline .container .box .div .text {
+    width: calc(100% - 70px);
+  }
+}
+.OurTimeline .container .box .div .text h3 {
+  padding: 15px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0;
+  position: relative;
+}
+.OurTimeline .container .box .div .text h3 .one {
+  border: solid transparent 12px;
+  border-left-color: rgb(10, 10, 10);
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(100%, -50%);
+}
+.OurTimeline .container .box .div .text h3 .tow {
+  border: solid transparent 12px;
+  border-right-color: rgb(10, 10, 10);
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(-100%, -50%);
+}
+.OurTimeline .container .box .div .text p {
+  font-size: 1.3em;
+  padding: 10px 20px;
+  color: gray;
+  background-color: white;
+}
+
+.Book-an-appointment .container h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 50px 0;
+}
+.Book-an-appointment .container form input {
+  background-color: #eee;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  color: gray;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0px 1px 1px rgba(133, 126, 126, 0.6705882353);
+}
+.Book-an-appointment .container form input:hover, .Book-an-appointment .container form input:focus,
+.Book-an-appointment .container form input :focus-visible {
+  box-shadow: 1px 1px 3px rgba(133, 126, 126, 0.6705882353), -1px -1px 3px #008eff;
+  border: none;
+}
+.Book-an-appointment .container form input[type=submit] {
+  background: black;
+  width: 150px;
+  color: white;
+  display: block;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 0;
+  box-shadow: none;
+}
+.Book-an-appointment .container form input[type=submit]:hover {
+  background: #008eff;
+}
+.Book-an-appointment .container form textarea {
+  width: 100%;
+  background-color: #eee;
+  height: 200px;
+}/*# sourceMappingURL=main.css.map */

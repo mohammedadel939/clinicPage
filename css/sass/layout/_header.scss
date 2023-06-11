@@ -1,0 +1,104 @@
+.header {
+  background-color: #eee;
+  z-index: 999;
+    box-shadow: 1px 0px 14px #bbb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .container {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    .logo {
+      text-align: center;
+      width: 100%;
+        @include mediaNormal {
+            display: none;
+        }
+      h1 {
+        color: $blueColor;
+        font-size: 1.5em;
+      }
+      p {
+        color: gray;
+        font-size: 0.8em;
+      }
+    }
+
+    .icon {
+      @include mediaNormal {
+        display: none;
+      }
+      
+      height: 20px;
+      span {
+        transition: .7s;
+        display: block;
+        width: 25px;
+        height: 2px;
+        &.nativ {
+          margin: 5px 0;
+          background-color: $grayColor;
+        }
+        background-color: $blackColor;
+      }
+    }
+
+    .navbar {
+      padding: 0;
+        @media (max-width:768px) {
+            &.open {
+                display: block;
+            } 
+        }
+        @include mediaNormal {
+          position: static;
+          display: flex;
+          justify-content: center;
+        }
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      ul {
+        @include mediaNormal {
+            display: flex;
+            align-items: center;
+          }
+        li {
+          a {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            color: $grayColor;
+            font-weight: bold;
+            &.special {
+              color: $blackColor;
+            }
+            &.logo {
+              display: none;
+              cursor: context-menu;
+              @include mediaNormal {
+                display: block;
+                padding: 0;
+                margin: 10px 10px;
+                width: 130px;
+              }
+            }
+
+            &:hover {
+                background-color: $grayColor;
+                color: white;
+                @include mediaNormal {
+                    background-color: #eee;
+                    color: black;
+                  }
+            }
+          }
+        }
+      }
+    }
+  }
+}
